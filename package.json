@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.dist.js",
+    "start": "node --enable-source-maps index.dist.js",
     "build": "rollup --config=rollup.config.mjs",
     "dev": "nodemon index.js"
   },
@@ -14,6 +14,7 @@
     "date-fns": "^2.29.3",
     "express": "^4.18.2",
     "nodemon": "^2.0.20",
-    "rollup": "^3.10.0"
+    "rollup": "^3.10.0",
+    "rollup-plugin-sourcemaps": "^0.6.3"
   }
 }
