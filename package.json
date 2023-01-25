@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.dist.js",
+    "build": "rollup --config=rollup.config.mjs",
+    "dev": "nodemon index.js"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "date-fns": "^2.29.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "rollup": "^3.10.0"
   }
 }
