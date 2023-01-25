@@ -5,7 +5,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use('*', (request, response) => {
+app.use('/error', () => {
+	throw new Error('Error has happened');
+});
+
+app.use('/', (request, response) => {
 	return response.send(`Hello ${request.method} request from ${request.originalUrl}, today is a ${format(new Date, 'eeee')}`);
 });
 
